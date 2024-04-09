@@ -1,0 +1,13 @@
+# vim: filetype=sh
+alias h="cd ~/ && ls -a" \
+d="cd ~/Documents && ls -a" \
+D="cd ~/Downloads && ls -a" \
+m="cd ~/Music && ls -a" \
+cf="cd ~/.config && ls -a" \
+sc="cd ~/.local/bin && ls -a" \
+log="cd ~/.logs && ls -a" \
+bf="$EDITOR ~/.config/bmfiles" \
+bd="$EDITOR ~/.config/bmdirs" \
+cfa="$EDITOR ~/.config/aliasrc" \
+cfz="$EDITOR ~/.config/zsh/.zshrc" \
+cfv="$EDITOR ~/.config/nvim/init.vim" \

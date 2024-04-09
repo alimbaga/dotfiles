@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+alias ka="killall" \
+	..2='cd ../..' \
+	..3='cd ../../..' \
+	..4='cd ../../../..' \
+	..5='cd ../../../../..' \
+	..6='cd ../../../../../..' \
+	mkd="mkdir -pv" \
+	e="$EDITOR" \
+	v="$EDITOR" \
+	ls="ls -hN --color=auto --group-directories-first" \
+	ll="ls -lahN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi" \
+	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
+
+# open files with vim
+vf() { fzf | xargs -r -I % "$EDITOR" % ;}
+
+# find and change directories
+fd() { cd $(find . -type d -printf '%d\t%P\n' | sort -r -nk1 | cut -f2- | fzf);}
